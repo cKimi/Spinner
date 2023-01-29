@@ -11,6 +11,7 @@ struct SpinnerView: View {
     @State var currentIndex: Int?
     @State var completed = false
     @State var isVisible = true
+    @State var currentOffset = CGSize.zero
     let shootUp = AnyTransition
         .offset(CGSize(width: 0, height: -1000))
         .animation(.easeIn(duration: 1.0))
@@ -43,6 +44,21 @@ struct SpinnerView: View {
                 }
                 .onAppear(perform: animate)
                 .transition(shootUp)
+                .offset(currentOffset)
+                .blur(radius: currentOffset == .zero ? 0 : 10)
+                .animation(.easeInOut(duration: 1.0), value: currentOffset)
+                .gesture(
+                    DragGesture()
+                        .onChanged { gesture in
+                            self.currentOffset = gesture.translation
+                        }
+                        .onEnded { _ in
+                            if self.currentOffset.height > 150 {
+                                self.complete()
+                            }
+                            self.currentOffset = .zero
+                        }
+                )
             }
         }
     }
