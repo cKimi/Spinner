@@ -10,6 +10,7 @@
 		0F0E2D4A2986DA8200F212E5 /* SpinnerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0E2D492986DA8200F212E5 /* SpinnerApp.swift */; };
 		0F0E2D4E2986DA8400F212E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F0E2D4D2986DA8400F212E5 /* Assets.xcassets */; };
 		0F0E2D592986DBA500F212E5 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0E2D582986DBA500F212E5 /* SpinnerView.swift */; };
+		0F0E2D5B2986E49200F212E5 /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0E2D5A2986E49200F212E5 /* Delay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +18,7 @@
 		0F0E2D492986DA8200F212E5 /* SpinnerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerApp.swift; sourceTree = "<group>"; };
 		0F0E2D4D2986DA8400F212E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F0E2D582986DBA500F212E5 /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
+		0F0E2D5A2986E49200F212E5 /* Delay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				0F0E2D4D2986DA8400F212E5 /* Assets.xcassets */,
+				0F0E2D5A2986E49200F212E5 /* Delay.swift */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -133,6 +136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F0E2D5B2986E49200F212E5 /* Delay.swift in Sources */,
 				0F0E2D592986DBA500F212E5 /* SpinnerView.swift in Sources */,
 				0F0E2D4A2986DA8200F212E5 /* SpinnerApp.swift in Sources */,
 			);

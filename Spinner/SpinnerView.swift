@@ -10,6 +10,10 @@ import SwiftUI
 struct SpinnerView: View {
     @State var currentIndex: Int?
     @State var completed = false
+    @State var isVisible = true
+    let shootUp = AnyTransition
+        .offset(CGSize(width: 0, height: -1000))
+        .animation(.easeIn(duration: 1.0))
     
     struct Leaf: View {
         let rotation: Angle
@@ -31,12 +35,15 @@ struct SpinnerView: View {
     
     var body: some View {
         VStack {
-            ZStack {
-                ForEach(0..<leavesCount) { index in
-                    Leaf(rotation: Angle(degrees: (Double(index) / Double(self.leavesCount)) * 360.0), isCurrent: index == self.currentIndex, isCompleting: self.completed)
+            if isVisible {
+                ZStack {
+                    ForEach(0..<leavesCount) { index in
+                        Leaf(rotation: Angle(degrees: (Double(index) / Double(self.leavesCount)) * 360.0), isCurrent: index == self.currentIndex, isCompleting: self.completed)
+                    }
                 }
+                .onAppear(perform: animate)
+                .transition(shootUp)
             }
-            .onAppear(perform: animate)
         }
     }
     
@@ -52,8 +59,19 @@ struct SpinnerView: View {
             iteration += 1
             if iteration == 60 {
                 timer.invalidate()
-                self.completed = true
-                self.currentIndex = nil
+                self.complete()
+            }
+        }
+    }
+    
+    func complete() {
+        guard !completed else { return }
+        
+        completed = true
+        currentIndex = nil
+        delay(seconds: 2) {
+            withAnimation {
+                self.isVisible = false
             }
         }
     }
