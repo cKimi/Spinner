@@ -8,15 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		0F0E2D4A2986DA8200F212E5 /* SpinnerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0E2D492986DA8200F212E5 /* SpinnerApp.swift */; };
-		0F0E2D4C2986DA8200F212E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0E2D4B2986DA8200F212E5 /* ContentView.swift */; };
 		0F0E2D4E2986DA8400F212E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F0E2D4D2986DA8400F212E5 /* Assets.xcassets */; };
+		0F0E2D592986DBA500F212E5 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0E2D582986DBA500F212E5 /* SpinnerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0F0E2D462986DA8200F212E5 /* Spinner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spinner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F0E2D492986DA8200F212E5 /* SpinnerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerApp.swift; sourceTree = "<group>"; };
-		0F0E2D4B2986DA8200F212E5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0F0E2D4D2986DA8400F212E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0F0E2D582986DBA500F212E5 /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +50,7 @@
 			isa = PBXGroup;
 			children = (
 				0F0E2D492986DA8200F212E5 /* SpinnerApp.swift */,
-				0F0E2D4B2986DA8200F212E5 /* ContentView.swift */,
+				0F0E2D582986DBA500F212E5 /* SpinnerView.swift */,
 				0F0E2D572986DAD900F212E5 /* Assets */,
 			);
 			path = Spinner;
@@ -133,7 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F0E2D4C2986DA8200F212E5 /* ContentView.swift in Sources */,
+				0F0E2D592986DBA500F212E5 /* SpinnerView.swift in Sources */,
 				0F0E2D4A2986DA8200F212E5 /* SpinnerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
